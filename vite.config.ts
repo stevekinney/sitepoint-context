@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: './src/index.ts',
+      entry: './src/index.tsx',
       name: pkg.name,
       fileName: 'index',
     },

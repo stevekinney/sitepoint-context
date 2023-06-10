@@ -28,6 +28,7 @@
     "@logux/eslint-config": "^50.0.0",
     "@total-typescript/ts-reset": "^0.4.2",
     "@types/color-convert": "^2.0.0",
+    "@types/lodash.uniq": "^4.5.7",
     "@types/lodash.uniqueid": "^4.0.7",
     "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",

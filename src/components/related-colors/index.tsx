@@ -8,9 +8,9 @@ import {
 import RelatedColorPalette from './related-color-palette';
 
 const RelatedColors = () => {
-  const { hexColor } = useContext(ColorContext);
-  let triadColors = getTriadColors(hexColor);
-  let complementColors = getComplementColors(hexColor);
+  const context = useContext(ColorContext);
+  let triadColors = getTriadColors(context?.hexColor || '#000000');
+  let complementColors = getComplementColors(context?.hexColor || '#000000');
 
   return (
     <>

@@ -5,9 +5,9 @@ import ColorProperty from './color-property';
 import { ColorContext } from '../../context';
 
 const HexToHSL = () => {
-  const { hexColor } = useContext(ColorContext);
+  const context = useContext(ColorContext);
 
-  let color = hex.hsl(hexColor);
+  let color = hex.hsl(context?.hexColor || '#000000');
   let [h, s, l] = color;
 
   return (

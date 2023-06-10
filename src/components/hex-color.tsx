@@ -1,5 +1,5 @@
 type HexColorProps = {
-  hexColor: string;
+  hexColor?: string;
 };
 
 const HexColor = ({ hexColor }: HexColorProps) => {

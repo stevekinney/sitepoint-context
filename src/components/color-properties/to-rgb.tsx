@@ -5,9 +5,9 @@ import ColorProperty from './color-property';
 import { ColorContext } from '../../context';
 
 const HexToRGB = () => {
-  const { hexColor } = useContext(ColorContext);
+  const context = useContext(ColorContext);
 
-  const color = hex.rgb(hexColor);
+  const color = hex.rgb(context?.hexColor || '#000000');
   const [r, g, b] = color;
 
   return (

@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 import { hex } from 'color-convert';
 
 import ColorProperty from './color-property';
-import { ColorContext } from '../../context';
+import { useColor } from '../../context';
 
 const HexToHSV = () => {
-  const { hexColor } = useContext(ColorContext);
+  const { hexColor } = useColor();
   const color = hex.hsv(hexColor);
   const [h, s, v] = color;
 

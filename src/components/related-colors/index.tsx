@@ -1,6 +1,4 @@
-import { useContext } from 'react';
-
-import { ColorContext } from '../../context';
+import { useColor } from '../../context';
 import {
   getComplementColors,
   getTriadColors,
@@ -8,7 +6,7 @@ import {
 import RelatedColorPalette from './related-color-palette';
 
 const RelatedColors = () => {
-  const { hexColor } = useContext(ColorContext);
+  const { hexColor } = useColor();
   let triadColors = getTriadColors(hexColor);
   let complementColors = getComplementColors(hexColor);
 

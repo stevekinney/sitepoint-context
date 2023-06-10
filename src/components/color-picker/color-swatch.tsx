@@ -1,9 +1,8 @@
-import { useContext } from 'react';
-
-import { ColorContext } from '../../context';
+import { useColor } from '../../context';
 
 const ColorSwatch = () => {
-  const { hexColor } = useContext(ColorContext);
+  const { hexColor } = useColor();
+
   return (
     <section className="flex flex-col items-center gap-2 h-80">
       <div

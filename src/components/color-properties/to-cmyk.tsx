@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 import { hex } from 'color-convert';
 
 import ColorProperty from './color-property';
-import { ColorContext } from '../../context';
+import { useColor } from '../../context';
 
 const HexToCMYK = () => {
-  const { hexColor } = useContext(ColorContext);
+  const { hexColor } = useColor();
   let color = hex.cmyk(hexColor);
   let [c, m, y, k] = color;
 

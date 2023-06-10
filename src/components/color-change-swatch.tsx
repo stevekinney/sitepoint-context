@@ -10,7 +10,7 @@ type ColorChangeSwatchProps = {
 };
 
 const ColorChangeSwatch = ({ hexColor, className }: ColorChangeSwatchProps) => {
-  const { setHexColor } = useContext(ColorContext);
+  const context = useContext(ColorContext);
 
   return (
     <Button
@@ -20,7 +20,7 @@ const ColorChangeSwatch = ({ hexColor, className }: ColorChangeSwatchProps) => {
       )}
       style={{ backgroundColor: hexColor }}
       onClick={() => {
-        setHexColor(hexColor);
+        context?.setHexColor(hexColor);
       }}
     >
       {hexColor}

@@ -5,8 +5,8 @@ import ColorProperty from './color-property';
 import { ColorContext } from '../../context';
 
 const HexToCMYK = () => {
-  const { hexColor } = useContext(ColorContext);
-  let color = hex.cmyk(hexColor);
+  const context = useContext(ColorContext);
+  let color = hex.cmyk(context?.hexColor || '#000000');
   let [c, m, y, k] = color;
 
   return (

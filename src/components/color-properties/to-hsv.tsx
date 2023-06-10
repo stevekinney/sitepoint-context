@@ -5,8 +5,8 @@ import ColorProperty from './color-property';
 import { ColorContext } from '../../context';
 
 const HexToHSV = () => {
-  const { hexColor } = useContext(ColorContext);
-  const color = hex.hsv(hexColor);
+  const context = useContext(ColorContext);
+  const color = hex.hsv(context?.hexColor || '#000000');
   const [h, s, v] = color;
 
   return (

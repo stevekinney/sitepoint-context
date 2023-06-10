@@ -11,9 +11,7 @@ type ColorState = {
   setHexColor: Dispatch<SetStateAction<string>>;
 };
 
-export const ColorContext = createContext<ColorState>(
-  null as unknown as ColorState,
-);
+export const ColorContext = createContext<ColorState | null>(null);
 
 export const ColorProvider = ({ children }: PropsWithChildren) => {
   const [hexColor, setHexColor] = useState('#e56e24');

@@ -1,14 +1,12 @@
-import { useContext } from 'react';
-
+import { useColor } from '../../context';
 import HexColor from '../hex-color';
-import { ColorContext } from '../../context';
 
 type ColorSelectProps = {
   label?: string;
 };
 
 const ColorSelect = ({ label = 'Color' }: ColorSelectProps) => {
-  const { hexColor, setHexColor } = useContext(ColorContext);
+  const { hexColor, setHexColor } = useColor();
 
   return (
     <div className="flex flex-col gap-2">

@@ -1,14 +1,18 @@
-import { PropsWithChildren, createContext, useState } from 'react';
+import { Dispatch, PropsWithChildren, SetStateAction, useState } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const ColorContext = createContext<any>(null);
+import { createContext } from './create-context';
+
+type ColorState = {
+  hexColor: string;
+  setHexColor: Dispatch<SetStateAction<string>>;
+};
+
+const [useContext, Provider] = createContext<ColorState>();
+
+export const useColor = useContext;
 
 export const ColorProvider = ({ children }: PropsWithChildren) => {
   const [hexColor, setHexColor] = useState('#e56e24');
 
-  return (
-    <ColorContext.Provider value={{ hexColor, setHexColor }}>
-      {children}
-    </ColorContext.Provider>
-  );
+  return <Provider value={{ hexColor, setHexColor }}>{children}</Provider>;
 };
